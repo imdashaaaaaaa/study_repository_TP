@@ -37,6 +37,7 @@ Fort - класс крепости, тоже реализует интерфей
 
 MobileHouse - класс дома на колёсах, реализует интерфейс Moveable
 
+# Выполнение: 
 
 ## Интерфейсы (умения):
 <img width="660" height="472" alt="image" src="https://github.com/user-attachments/assets/d3c353c4-5a99-4260-9136-b35292578a3a" />
