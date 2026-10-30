@@ -53,5 +53,6 @@ MobileHouse - класс дома на колёсах, реализует инт
 <img width="1833" height="598" alt="image" src="https://github.com/user-attachments/assets/03369d64-b88e-4e19-8c8a-7d6ade97116c" />
 
 
+
 <img width="1004" height="846" alt="image" src="https://github.com/user-attachments/assets/e0380ed9-7051-4e94-99e2-ed51f86f1f3c" />
 
