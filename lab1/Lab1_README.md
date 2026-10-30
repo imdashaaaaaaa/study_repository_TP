@@ -11,10 +11,12 @@ git init - для инициализации репозитория (созда�
 
 git status - просмотр, какой статус имеет каждый файл в проекте. 
 Так как мы пока не добавляли файлы в индекс и не коммитили, их статус будет edited:
+<img width="1266" height="762" alt="git status" src="https://github.com/user-attachments/assets/ec28a0aa-1c96-4b24-a71a-220f5fedd5ea" />
 
 git add . - добавление всех файлов проекта в индекс, чтобы они были добавлены в будущий коммит (точка в конце обозначает добавление всех файлов)
 
 git config - добавление информации о себе: имя и почта 
+<img width="1266" height="762" alt="git status" src="https://github.com/user-attachments/assets/8aabed16-4131-48d5-af14-15ef1724a304" />
 
 git commit - создание коммитов 
 git log - просмотр истории коммитов в репозитории
@@ -22,5 +24,6 @@ git log - просмотр истории коммитов в репозитор
 ## Создаем репозиторий в GitHub + уникальный SSH:
 
 git remote - добавление данных в локальный репозиторий об удаленном
+<img width="1266" height="762" alt="git status" src="https://github.com/user-attachments/assets/5f3ada7e-974f-425c-a08a-bacc96bcbd5b" />
 
 git push - пуш в удаленный репозиторий
