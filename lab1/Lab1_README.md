@@ -20,6 +20,7 @@
 <img width="1266" height="762" alt="git status" src="https://github.com/user-attachments/assets/8aabed16-4131-48d5-af14-15ef1724a304" />
 
 **git commit** - создание коммитов 
+
 **git log** - просмотр истории коммитов в репозитории
 
 ## Создаем репозиторий в GitHub + уникальный SSH:
