@@ -36,3 +36,21 @@ Building - класс, описывающий постройку:
 Fort - класс крепости, тоже реализует интерфейс Attacker (может из пушек стрелять в противников)
 
 MobileHouse - класс дома на колёсах, реализует интерфейс Moveable
+
+
+## Интерфейсы (умения):
+<img width="660" height="472" alt="image" src="https://github.com/user-attachments/assets/d3c353c4-5a99-4260-9136-b35292578a3a" />
+
+## Базовые классы: 
+<img width="1109" height="1361" alt="image" src="https://github.com/user-attachments/assets/d9bb51d2-3e01-44bb-893d-f0f1a7be9a72" />
+
+## Конкретные классы:
+<img width="1057" height="1102" alt="image" src="https://github.com/user-attachments/assets/2b498479-fc57-4396-adbb-29a11ff20f39" />
+
+
+## Тестирование: 
+<img width="1833" height="598" alt="image" src="https://github.com/user-attachments/assets/03369d64-b88e-4e19-8c8a-7d6ade97116c" />
+
+
+<img width="1004" height="846" alt="image" src="https://github.com/user-attachments/assets/e0380ed9-7051-4e94-99e2-ed51f86f1f3c" />
+
