@@ -10,6 +10,7 @@
 **git init** - для инициализации репозитория (создает в текущей директории гит-репозиторий (скрытую папку .git с базой данных и метаданными))
 
 **git status** - просмотр, какой статус имеет каждый файл в проекте. 
+
 Так как мы пока не добавляли файлы в индекс и не коммитили, их статус будет edited:
 
 <img width="1266" height="762" alt="git status" src="https://github.com/user-attachments/assets/ec28a0aa-1c96-4b24-a71a-220f5fedd5ea" />
@@ -17,7 +18,8 @@
 **git add .** - добавление всех файлов проекта в индекс, чтобы они были добавлены в будущий коммит (точка в конце обозначает добавление всех файлов)
 
 **git config** - добавление информации о себе: имя и почта 
-<img width="1266" height="762" alt="git status" src="https://github.com/user-attachments/assets/8aabed16-4131-48d5-af14-15ef1724a304" />
+
+<img width="1260" height="457" alt="config commit" src="https://github.com/user-attachments/assets/95748afc-07e0-4e4b-8321-3beef8dd1d1e" />
 
 **git commit** - создание коммитов 
 
@@ -27,6 +29,7 @@
 <img width="2738" height="1481" alt="repository" src="https://github.com/user-attachments/assets/aba668e2-1d1d-4a55-819a-7682ed5351da" />
 
 **git remote** - добавление данных в локальный репозиторий об удаленном
+
 <img width="2131" height="646" alt="remote" src="https://github.com/user-attachments/assets/51f509cb-16ba-422a-8188-745466f0ace0" />
 
 **git push** - пуш в удаленный репозиторий
