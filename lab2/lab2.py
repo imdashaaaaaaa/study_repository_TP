@@ -1,27 +1,22 @@
 from abc import ABC, abstractmethod
 
-# ==========================================
-# 1. ИНТЕРФЕЙСЫ (Умения)
-# ==========================================
-# В Python интерфейсы реализуются через ABC (Абстрактные Базовые Классы)
-# с абстрактными методами.
-
 class Attacker(ABC):
     """Интерфейс для тех, кто умеет атаковать"""
+
     @abstractmethod
     def attack(self, unit: 'Unit'):
         pass
 
 class Moveable(ABC):
     """Интерфейс для тех, кто умеет двигаться"""
+
     @abstractmethod
     def move(self, x: int, y: int):
+        """Метод для изменения координат объекта"""
         pass
 
 
-# ==========================================
-# 2. БАЗОВЫЕ КЛАССЫ (Иерархия)
-# ==========================================
+# БАЗОВЫЕ КЛАССЫ (Иерархия)
 
 class GameObject(ABC):
     """Базовый класс для всех объектов в игре"""
@@ -45,7 +40,7 @@ class GameObject(ABC):
 
 
 class Unit(GameObject):
-    """Класс для юнитов (живых существ)"""
+    """Класс для юнитов (живых существ). Наследуется от GameObject"""
     def __init__(self, id: int, name: str, x: int, y: int, hp: float):
         super().__init__(id, name, x, y)
         self._hp = hp
@@ -72,10 +67,7 @@ class Building(GameObject):
     def is_built(self) -> bool:
         return self._is_built
 
-
-# ==========================================
-# 3. КОНКРЕТНЫЕ КЛАССЫ (Реализация)
-# ==========================================
+# КОНКРЕТНЫЕ КЛАССЫ (Реализация)
 
 class Archer(Unit, Attacker, Moveable):
     """Лучник: юнит, который умеет и атаковать, и двигаться"""
@@ -84,26 +76,26 @@ class Archer(Unit, Attacker, Moveable):
             print(f"  {unit.get_name()} уже мертв, атака невозможна.")
             return
         damage = 15.0
-        print(f"🏹 {self.get_name()} стреляет в {unit.get_name()}!")
+        print(f" {self.get_name()} стреляет в {unit.get_name()}!")
         unit.receive_damage(damage)
 
     def move(self, x: int, y: int):
-        print(f"🏃 {self.get_name()} перемещается на координаты ({x}, {y}).")
         self._x = x
         self._y = y
+        print(f" Лучник {self.get_name()} перемещается на ({self._x}, {self._y}).")
 
 
 class Fort(Building, Attacker):
     """Крепость: постройка, которая умеет ТОЛЬКО атаковать"""
     def attack(self, unit: Unit):
         if not self.is_built():
-            print(f"🏰 {self.get_name()} еще не построена, стрелять нельзя!")
+            print(f" Крепость {self.get_name()} еще не построена, стрелять нельзя!")
             return
         if not unit.is_alive():
-            print(f"  {unit.get_name()} уже мертв, атака невозможна.")
+            print(f" {unit.get_name()} уже мертв, атака невозможна.")
             return
-        damage = 50.0
-        print(f"💥 {self.get_name()} стреляет из пушки в {unit.get_name()}!")
+        damage = 40.0
+        print(f" {self.get_name()} стреляет из пушки в {unit.get_name()}!")
         unit.receive_damage(damage)
 
 
@@ -111,16 +103,15 @@ class MobileHouse(Building, Moveable):
     """Дом на колесах: постройка, которая умеет ТОЛЬКО двигаться"""
     def move(self, x: int, y: int):
         if not self.is_built():
-            print(f"🏠 {self.get_name()} еще не достроен, он не может ехать.")
+            print(f" Дом {self.get_name()} еще не достроен, он не может ехать.")
             return
-        print(f"🚐 {self.get_name()} медленно катится на координаты ({x}, {y}).")
         self._x = x
         self._y = y
+        print(f" {self.get_name()} переехал на ({self._x}, {self._y}).")
 
 
-# ==========================================
-# 4. ПРОВЕРКА РАБОТЫ (Тесты)
-# ==========================================
+# ПРОВЕРКА РАБОТЫ (Тесты)
+
 if __name__ == "__main__":
     print("--- Создание объектов ---")
     archer1 = Archer(1, "Леголас", 10, 10, 100)
